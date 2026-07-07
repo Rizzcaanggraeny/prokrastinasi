@@ -77,8 +77,50 @@ nav a:hover{
     /* Efek muncul */
     transition:opacity 0.8s ease;
 }
-
+.note{
+    color:white;
+    font-size:50px;
+    text-align:center;
+    line-height:1.6;
+}
 /* Muncul saat cursor masuk area hitam */
 .black-section:hover .quote{
     opacity:1;
+}
+
+.tombol-quiz {
+    transition: transform 0.2s; /* Efek halus */
+}
+
+.tombol-quiz:hover {
+    transform: scale(1.05); /* Membesar sedikit saat di-hover */
+    filter: brightness(90%); /* Menjadi sedikit gelap saat di-hover */
+}
+.container-tombol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; <--- Coba hapus baris height ini jika jaraknya terlalu jauh */
+}
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+/* Cari class yang membungkus gambar kamu, lalu hilangkan height-nya */
+.container-tombol {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto !important; /* Paksa jadi auto biar tingginya ngikutin gambar */
 }

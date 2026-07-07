@@ -3,90 +3,55 @@
 <head>
     <meta charset="utf-8">
     <title>Profile Saya</title>
-
-    <link rel="stylesheet"
-    href="<?= base_url('assets/css/styleprofile.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/styleprofile.css'); ?>">
 </head>
-
 <body>
 
 <nav>
     <ul>
-        <li>
-            <a href="<?= site_url('profile'); ?>">
-                Home
-            </a>
-        </li>
-
-        <li><a href="#">Motivation</a></li>
-        <li><a href="#">Profile</a></li>
+        <li><a href="<?= site_url('prokrastinasi'); ?>">Home</a></li>
+        <li><a href="<?= site_url('motivasi'); ?>">Motivation</a></li>
+        <li><a href="<?= site_url('profile'); ?>">Profile</a></li>
     </ul>
 </nav>
 
 <section class="profile-header">
-
     <h1>Profil Anda</h1>
-
-    <p>
-        Kenali karakteristik dan kebiasaan
-        Anda dalam mengatasi prokrastinasi
-    </p>
-
+    <p>Kenali karakteristik dan kebiasaan Anda dalam mengatasi prokrastinasi</p>
 </section>
 
 <section class="result-container">
-
     <div class="left-card">
-
-        <img src="<?= base_url('assets/img/avatar.png'); ?>">
-
+        <img src="<?= base_url('assets/img/avatar.png'); ?>" alt="Avatar">
         <h2>The Planner</h2>
-
-        <p>
-            Anda cenderung terorganisir,
-            mampu mengatur prioritas,
-            dan menyelesaikan tugas tepat waktu.
-        </p>
-
+        <p>Anda cenderung terorganisir, mampu mengatur prioritas, dan menyelesaikan tugas tepat waktu.</p>
     </div>
 
     <div class="right-card">
+        <h2>Nih To Do List Lu</h2>
+        <p>JANGAN LUPA DI LAKUIN BWANG</p>
+        
+        <?php if (!empty($todo)): ?>
 
-        <h2>Sifat-Sifat Kepribadian</h2>
+    <?php foreach ($todo as $row): ?>
 
-        <div class="trait">
-            <span>85% Disiplin</span>
-            <div class="bar">
-                <div class="fill" style="width:85%"></div>
-            </div>
+        <div class="todo-item" style="margin-bottom:10px; display:flex; align-items:center;">
+
+            <input type="checkbox" style="margin-right:10px;">
+
+            <span><?= $row->isi; ?></span>
+
         </div>
 
-        <div class="trait">
-            <span>78% Fokus</span>
-            <div class="bar">
-                <div class="fill" style="width:78%"></div>
-            </div>
-        </div>
+    <?php endforeach; ?>
 
-        <div class="trait">
-            <span>90% Motivasi</span>
-            <div class="bar">
-                <div class="fill" style="width:90%"></div>
-            </div>
-        </div>
+<?php else: ?>
 
-        <div class="trait">
-            <span>80% Manajemen Waktu</span>
-            <div class="bar">
-                <div class="fill" style="width:80%"></div>
-            </div>
-        </div>
+    <p>Belum ada To Do List, silakan kerjakan kuis terlebih dahulu.</p>
 
+<?php endif; ?>
     </div>
-
 </section>
-<link rel="stylesheet" type="text/css" hreaf="<?php echo base_url()
-?>assets/css/styleprofile.css">
 
 </body>
 </html>

@@ -1,106 +1,35 @@
-body{
-    margin:0;
-    background:#fff;
-    font-family: Arial, sans-serif;
+body { margin: 0; background: #fff; font-family: Arial, sans-serif; }
+
+nav { padding: 30px 0; }
+nav ul { list-style: none; display: flex; justify-content: center; gap: 80px; margin: 0; padding: 0; }
+nav a { text-decoration: none; color: black; font-size: 22px; font-weight: 500; }
+
+.hero { text-align: center; margin-top: 20px; }
+.hero h1 { font-size: 130px; font-family: "Times New Roman", serif; font-weight: bold; margin: 0; letter-spacing: 3px; }
+
+/* Wrapper untuk gambar dan video */
+.container-hover {
+    margin: 60px auto; 
+    width: 500px; 
+    height: 500px; 
+    position: relative; /* Kunci agar elemen di dalamnya bisa di-posisi absolut */
+    cursor: pointer;
 }
 
-nav{
-    padding:35px 0;
+/* Gambar dan Video ditumpuk */
+.tampilan-gambar, .tampilan-video {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease;
 }
 
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    gap:70px;
-    margin:0;
-    padding:0;
-}
+/* Sembunyikan video secara default */
+.tampilan-video { opacity: 0; }
 
-nav a{
-    text-decoration:none;
-    color:black;
-    font-size:18px;
-}
-
-.hero{
-    text-align:center;
-    margin-top:40px;
-}
-
-.hero h1{
-    font-size:90px;
-    font-family:"Times New Roman", serif;
-    font-weight:bold;
-    margin-bottom:80px;
-}
-
-.motivasi-item{
-    text-align:center;
-    margin-bottom:100px;
-}
-
-.motivasi-item img{
-    width:159body{
-    margin:0;
-    background:#fff;
-    font-family: Arial, sans-serif;
-}
-
-/* MENU */
-nav{
-    padding:30px 0;
-}
-
-nav ul{
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    gap:80px;
-    margin:0;
-    padding:0;
-}
-
-nav a{
-    text-decoration:none;
-    color:black;
-    font-size:22px;
-    font-weight:500;
-}
-
-/* JUDUL */
-.hero{
-    text-align:center;
-    margin-top:20px;
-}
-
-.hero h1{
-    font-size:130px;
-    font-family:"Times New Roman", serif;
-    font-weight:bold;
-    margin:0;
-    letter-spacing:3px;
-}
-
-/* GAMBAR */
-.motivasi-item{
-    text-align:center;
-    margin-top:70px;
-    margin-bottom:70px;
-}
-
-.motivasi-item img{
-    width:80px;
-    height:auto;
-    display:block;
-    margin:0 auto;
-    transition:0.5s;
-}
-.motivasi-item img{
-    width:150px;
-    transition:0.5s;
-}
-.motivasi-item img:hover{
-    transform:scale(2);
-}
-}
+/* Logika Hover: Gambar hilang, Video muncul */
+.container-hover:hover .tampilan-gambar { opacity: 0; }
+.container-hover:hover .tampilan-video { opacity: 1; }

@@ -1,0 +1,130 @@
+/* ==========================
+   BODY
+========================== */
+
+body{
+    background:#f5f5f5;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container{
+    max-width:900px;
+    margin:80px auto;
+}
+
+/* ==========================
+   CARD
+========================== */
+
+.card{
+    border:none;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    background:#fff;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.card-header{
+    background:#212529 !important;
+    color:#fff;
+    text-align:center;
+    padding:28px;
+}
+
+.card-header h2{
+    margin:0;
+    font-weight:700;
+    font-size:42px;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+.card-body{
+    padding:40px;
+}
+
+/* ==========================
+   LIST
+========================== */
+
+.list-group-item{
+
+    border:none;
+    border-bottom:1px solid #ececec;
+
+    display:flex;
+    align-items:center;
+
+    gap:18px;
+
+    padding:22px 5px;
+
+    font-size:20px;
+
+    line-height:1.7;
+
+    transition:.25s;
+}
+
+.list-group-item:last-child{
+    border-bottom:none;
+}
+
+.list-group-item:hover{
+
+    background:#fafafa;
+}
+
+/* ==========================
+   CHECKBOX
+========================== */
+
+input[type="checkbox"]{
+
+    width:24px;
+    height:24px;
+
+    min-width:24px;
+    min-height:24px;
+
+    flex-shrink:0;
+
+    cursor:pointer;
+}
+
+/* ==========================
+   TEKS TODO
+========================== */
+
+.todo-text{
+
+    flex:1;
+
+    color:#212529;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .card-header h2{
+        font-size:30px;
+    }
+
+    .list-group-item{
+        font-size:17px;
+    }
+
+}
