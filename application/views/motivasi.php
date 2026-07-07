@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Motivasi</title>
+    <title>Article</title>
     <link rel="stylesheet" href="<?= base_url('assets/css/stylemotivasi.css'); ?>">
 </head>
 <body>
@@ -10,13 +10,13 @@
 <nav>
     <ul>
         <li><a href="<?= site_url('prokrastinasi'); ?>">Home</a></li>
-        <li><a href="<?= site_url('prokrastinasi/motivasi'); ?>">Motivation</a></li>
+        <li><a href="<?= site_url('prokrastinasi/motivasi'); ?>">Article</a></li>
         <li><a href="<?= site_url('prokrastinasi/profile'); ?>">Profile</a></li>
     </ul>
 </nav>
 
 <section class="hero">
-    <h1>MOTIVASI</h1>
+    <h1>Article</h1>
 </section>
 
 <div class="container-hover">

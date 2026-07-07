@@ -10,7 +10,7 @@
 <nav>
     <ul>
         <li><a href="<?= site_url('prokrastinasi'); ?>">Home</a></li>
-        <li><a href="<?= site_url('prokrastinasi/motivasi'); ?>">Motivation</a></li>
+        <li><a href="<?= site_url('prokrastinasi/motivasi'); ?>">Article</a></li>
         <li><a href="<?= site_url('prokrastinasi/profile'); ?>">Profile</a></li>
     </ul>
 </nav>

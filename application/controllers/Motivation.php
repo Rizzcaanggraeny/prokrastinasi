@@ -1,7 +1,7 @@
 <?php
 // controllers/MotivationController.php
 
-require_once __DIR__ . '/application/models/Motivation.php';
+require_once APPPATH . 'models/Motivation.php';
 
 class MotivationController
 {
@@ -20,9 +20,9 @@ class MotivationController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/motivation/index.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/motivation/index.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function create()
@@ -33,9 +33,9 @@ class MotivationController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/motivation/form.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/motivation/form.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function store()
@@ -65,9 +65,9 @@ class MotivationController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/motivation/form.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/motivation/form.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function update($id)
