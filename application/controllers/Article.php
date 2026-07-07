@@ -1,7 +1,7 @@
 <?php
 // controllers/ArticleController.php
 
-require_once __DIR__ . '/application/models/Article.php';
+require_once APPPATH . 'models/Article.php';
 
 class ArticleController
 {
@@ -20,9 +20,9 @@ class ArticleController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/article/index.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/article/index.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function create()
@@ -33,9 +33,9 @@ class ArticleController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/article/form.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/article/form.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function store()
@@ -66,9 +66,9 @@ class ArticleController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/article/form.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/article/form.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function update($id)

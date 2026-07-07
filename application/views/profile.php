@@ -10,8 +10,8 @@
 <nav>
     <ul>
         <li><a href="<?= site_url('prokrastinasi'); ?>">Home</a></li>
-        <li><a href="<?= site_url('motivasi'); ?>">Motivation</a></li>
-        <li><a href="<?= site_url('profile'); ?>">Profile</a></li>
+        <li><a href="<?= site_url('prokrastinasi/motivasi'); ?>">Article</a></li>
+        <li><a href="<?= site_url('prokrastinasi/profile'); ?>">Profile</a></li>
     </ul>
 </nav>
 
@@ -30,7 +30,7 @@
     <div class="right-card">
         <h2>Nih To Do List Lu</h2>
         <p>JANGAN LUPA DI LAKUIN BWANG</p>
-        
+
         <?php if (!empty($todo)): ?>
 
     <?php foreach ($todo as $row): ?>

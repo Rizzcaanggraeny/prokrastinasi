@@ -1,7 +1,7 @@
 <?php
 // controllers/ProfileController.php
 
-require_once __DIR__ . '/application/models/Profile.php';
+require_once APPPATH . 'models/Profile.php';
 
 class ProfileController
 {
@@ -21,9 +21,9 @@ class ProfileController
 
         extract($data);
 
-        require __DIR__ . '/application/views/layout/header.php';
-        require __DIR__ . '/application/views/profile/index.php';
-        require __DIR__ . '/application/views/layout/footer.php';
+        require APPPATH . 'views/layout/header.php';
+        require APPPATH . 'views/profile/index.php';
+        require APPPATH . 'views/layout/footer.php';
     }
 
     public function update()

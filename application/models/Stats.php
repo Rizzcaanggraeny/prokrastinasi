@@ -13,6 +13,13 @@ class Stats
 
     public function ambil(): array
     {
-        return json_decode(file_get_contents($this->file), true) ?: ['pengunjungMingguIni' => 0];
+        if (!is_file($this->file) || !is_readable($this->file)) {
+            return ['pengunjungMingguIni' => 0];
+        }
+
+        $content = file_get_contents($this->file);
+        $data = json_decode($content, true);
+
+        return is_array($data) ? $data : ['pengunjungMingguIni' => 0];
     }
 }
